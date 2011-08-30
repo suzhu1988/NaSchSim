@@ -1,6 +1,5 @@
 import pyglet
 import time
-import thread
 from random import randint, choice
 from pyglet.graphics import *
 
