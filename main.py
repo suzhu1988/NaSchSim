@@ -63,16 +63,16 @@ def on_draw():
     batch.draw()
     lock.release()
 
-def run():
-    while(True):
-        lock.acquire()
-        for car in Car.cars:
-            car.moved = False
-        cycle()
-        if road[0] is None and len(Car.cars) < 20:
-            road[0] = choice([Car, Slow])()
-        lock.release()
-        time.sleep(breaktime)
+def run(bloat):
+    #while(True):
+    lock.acquire()
+    for car in Car.cars:
+        car.moved = False
+    cycle()
+    if road[0] is None and len(Car.cars) < 20:
+        road[0] = choice([Car, Slow])()
+    lock.release()
+    time.sleep(breaktime)
 
 def cycle():
     for car in road:
@@ -111,6 +111,7 @@ if __name__ == "__main__":
     for i in range(roadlength):
         road.append(None)
 
-    mythread = thread.start_new_thread(run, ())
+    #mythread = thread.start_new_thread(run, ())
+    pyglet.clock.schedule_interval(run, 1/10.0)
     pyglet.app.run()
 
