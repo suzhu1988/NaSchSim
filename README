@@ -1,7 +1,7 @@
-NaSchSim - Simple Freeway Traffic Simulator based on Nagel Schreckenberg model. Coded in Python using PyGlets and OpenGL. Inspired by Stausim by Bastinat0r.
+NaSchSim - Simple Freeway Traffic Simulator based on Nagel Schreckenberg model. Coded in Python using PyGlet and OpenGL. Inspired by Stausim by Bastinat0r.
 
 Setup:
-    Requires PyGlet (easy_install pyglets)
+    Requires PyGlet (easy_install pyglet)
 
 Run:
     python main.py
