@@ -5,6 +5,7 @@ from random import randint, choice
 from pyglet.graphics import *
 
 roadlength = 300        #number of tiles on the road
+maxcars = 30
 breaktime = 0.1         #number of seconds to wait after each cycle
 slowprob = 33           #probability of velocity reduction
 
@@ -65,12 +66,11 @@ def on_draw():
     lock.release()
 
 def run(bloat):
-    #while(True):
     lock.acquire()
     for car in Car.cars:
         car.moved = False
     cycle()
-    if road[0] is None and len(Car.cars) < 20:
+    if road[0] is None and len(Car.cars) < maxcars:
         road[0] = choice([Car, Slow])()
     lock.release()
     time.sleep(breaktime)
@@ -112,7 +112,6 @@ if __name__ == "__main__":
     for i in range(roadlength):
         road.append(None)
 
-    #mythread = thread.start_new_thread(run, ())
     pyglet.clock.schedule_interval(run, 1/10.0)
     pyglet.app.run()
 
