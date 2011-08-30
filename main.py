@@ -8,7 +8,8 @@ roadlength = 300        #number of tiles on the road
 breaktime = 0.1         #number of seconds to wait after each cycle
 slowprob = 33           #probability of velocity reduction
 
-window = pyglet.window.Window(1280, 20) #window size
+config = gl.Config(double_buffer=True)
+window = pyglet.window.Window(1280, 20, config = config) #window size
 w,h = window.get_size()
 tw, th = w/roadlength, h
 road = []
