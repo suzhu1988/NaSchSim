@@ -15,7 +15,6 @@ w,h = window.get_size()
 tw, th = w/roadlength, h
 road = []
 lock = thread.allocate_lock()
-mythread = None
 
 
 class Color(object):
