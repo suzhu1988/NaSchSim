@@ -14,7 +14,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 __copyright__ = "Copyright 2011, Barthimaeus"
-__credits__ = ["bastinat0r, marinmartimeo"]
+__credits__ = ["bastinat0r, MartinMartimeo"]
 __email__ = "barthimaeus@web.de"
 
 
